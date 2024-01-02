@@ -13,7 +13,7 @@ num_to_char = tf.keras.layers.StringLookup(vocabulary=char_to_num.get_vocabulary
 # initialize dlib's face detector (HOG-based) and then create
 # the facial landmark predictor
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('../shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 
 
 def make_gif(frames, output_path):
