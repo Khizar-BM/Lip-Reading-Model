@@ -1,4 +1,3 @@
-import imageio.v2
 import streamlit as st
 import os
 import cv2
