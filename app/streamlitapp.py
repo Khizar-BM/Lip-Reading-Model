@@ -1,9 +1,9 @@
 import streamlit as st
 import os
-import cv2
 import tensorflow as tf
 from utils import load_data, num_to_char, make_gif
 from modelutil import load_model
+import imageio
 
 st.set_page_config(layout="wide")
 
