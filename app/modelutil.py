@@ -22,7 +22,7 @@ def load_model():
 
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
 
-    model.load_weights("/models/checkpoint")
+    model.load_weights("models/checkpoint")
 
     return model
 
