@@ -1,0 +1,2 @@
+model_checkpoint_path: "sarosh_saved"
+all_model_checkpoint_paths: "sarosh_saved"
