@@ -29,7 +29,7 @@ if selected_video:
 
         os.system(f"ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y")
 
-        video = open("app/test_video.mp4", "rb")
+        video = open("test_video.mp4", "rb")
         video_bytes = video.read()
         st.video(video_bytes)
         st.info("Below is the actual annotation of the video")
@@ -40,10 +40,10 @@ if selected_video:
         make_gif(roi, "roi.gif")
         imageio.v3.imwrite("marked.gif", marked_video, loop=True)
 
-        st.image("app/marked.gif")
+        st.image("marked.gif")
 
         st.info("Our deep learning model only sees the grayscale extracted mouth region")
-        st.image("app/roi.gif", width=320)
+        st.image("roi.gif", width=320)
 
         model = load_model()
         yhat = model.predict(tf.expand_dims(roi, axis=0))
