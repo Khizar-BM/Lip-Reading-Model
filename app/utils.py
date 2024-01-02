@@ -100,8 +100,8 @@ def load_alignments(path):
 def load_data(path):
     path = path.numpy().decode('UTF-8')
     file_name = os.path.splitext(os.path.basename(path))[0]
-    video_path = os.path.join("..", 'data', 's1', f'{file_name}.mpg')
-    alignment_path = os.path.join("..", 'data', 'alignments', 's1', f'{file_name}.align')
+    video_path = os.path.join('data', 's1', f'{file_name}.mpg')
+    alignment_path = os.path.join('data', 'alignments', 's1', f'{file_name}.align')
     frames, marked_frames = load_video(video_path)
     alignments = load_alignments(alignment_path)
 
