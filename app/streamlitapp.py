@@ -15,7 +15,7 @@ with st.sidebar:
 
 st.title("LipNet Streamlit App")
 
-options = os.listdir(os.path.join("..", "data", "s1"))
+options = os.listdir(os.path.join("data", "s1"))
 selected_video = st.selectbox("Select video", options)
 
 col1, col2 = st.columns(2)
