@@ -29,9 +29,9 @@ if selected_video:
 
         os.system(f"ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y")
 
-        video = open("app/test_video.mp4", "rb")
-        video_bytes = video.read()
-        st.video(video_bytes)
+        # video = open("app/test_video.mp4", "rb")
+        # video_bytes = video.read()
+        # st.video(video_bytes)
         st.info("Below is the actual annotation of the video")
         st.text(tf.strings.reduce_join(num_to_char(annotation.numpy())).numpy().decode('utf-8'))
 
